@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Sealed: true
+Main-Class: co.uk.dmp9software.prisonread.PrisonRead
+Class-Path: prison.jar
