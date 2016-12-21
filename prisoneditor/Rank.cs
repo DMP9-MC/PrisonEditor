@@ -826,7 +826,7 @@ namespace PrisonDataEditor
             openFile = sfd.FileName;
             Encoding iso = Encoding.GetEncoding("ISO-8859-1");
             string file = iso.GetString(Convert.FromBase64String("TmFtZT1NeU5ld01pbmUNCldvcmxkTmFtZT13b3JsZA0KTWluWD0wDQpNaW5ZPTYwDQpNaW5aPTANCk1heFg9MjANCk1heFk9ODANCk1heFo9MjANCkJsb2NrPTE6MCwxLjA="));
-            Invoke(new Action(() => { Controls.Clear(); MineEditor(); }));
+            Invoke(new Action(() => {  Controls.Clear(); MineEditor(); }));
             blocks = new List<string>();
             foreach (string s in file.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
             {
@@ -857,8 +857,6 @@ namespace PrisonDataEditor
                 treeView1.Nodes.Add(editorNode);
             }
             Invoke(new Action(() => { BlockDeselected(); }));
-            Controls.Clear();
-            MineEditor();
         }
     }
 }
